@@ -1,7 +1,6 @@
 import os
 import random
 import re
-import mysql.connector
 from geopy.geocoders import Nominatim
 import pyautogui
 import speech_recognition as sr
@@ -54,8 +53,8 @@ def take_command():
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
-            if 'alexa' in command:
-                command = command.replace('alexa', '')
+            if 'shree' in command:
+                command = command.replace('shree', '')
                 print(command)
     except sr.UnknownValueError:
 
